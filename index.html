@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <title>Reaction Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+  <div class="app">
+    <img src="logo.png" alt="Reaction Game Logo" width="700" style="margin-bottom: 40px; display: block; margin-left: auto; margin-right: auto;" onerror="this.style.display='none'">
+
+    <div class="content">
+      <div class="game" id="game-holder"></div>
+
+      <div class="panel">
+        <h2>Jak se hraje</h2>
+        <p>
+          • Na ploše se objevují barevné kruhy.<br>
+          • <b>Zelený</b> kruh = klikni → +1 bod.<br>
+          • <b>Červený</b> kruh = neklikej → -1 bod.<br>
+          • Kliknutí mimo kruh = -1 bod.<br>
+          • Hra trvá nastavený počet sekund.
+        </p>
+
+        <hr>
+        <div class="controls">
+          <label> Délka (s):
+            <input id="timeInput" type="number" min="5" max="120" value="30">
+          </label>
+          <label> Velikost:
+            <input id="sizeInput" type="range" min="20" max="80" value="45">
+          </label>
+        </div>
+
+        <div id="menuButtons" class="menu-buttons">
+          <button id="startBtn">Start</button>
+        </div>
+
+        <div class="stats">
+          <p>Skóre: <span id="score">0</span></p>
+          <p>Nejlepší: <span id="best">0</span></p>
+          <p>Čas: <span id="timeLeft">0</span>s</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.3/p5.min.js"></script>
+
+  <script src="classes.js"></script>
+  <script src="sketch.js"></script>
+</body>
+</html>
